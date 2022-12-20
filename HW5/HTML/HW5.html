@@ -1,0 +1,94 @@
+<!--
+    Creator : Anson Cheang
+    Contact : Anson0906@gmail.com
+    Description : This is the base skeleton
+    for the scrabble game, along with
+    the rules, and some notes
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scrabble</title>
+    <meta charset = "utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href = "../CSS/design.css" rel = "stylesheet">
+	<script src = "https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.js"></script>
+    <script src = "https://code.jquery.com/ui/jquery-ui-git.js"></script>
+    <script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link href = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel = "stylesheet">
+    
+    <script src = "../graphics_data/graphics_data/pieces.json"></script>
+    <script src = "../graphics_data/graphics_data/Scrabble_Pieces_AssociativeArray_Jesse.js"></script>
+    <script src = "../JAVASCRIPT/command.js"></script>
+</head>
+<body>
+    <div  class="col-md-12" id = "scrabbleimg">
+        <table id = "tablerow">
+            <tr class = "nr">
+                <th class = "nl" id = "n1"></th>
+                <th class = "nl" id = "n2"></th>
+                <th class = "DWS nl" id = "n3"></th>
+                <th class = "nl" id = "n4"></th>
+                <th class = "nl" id = "n5"></th>
+                <th class = "nl" id = "n6"></th>
+                <th class = "DLS nl" id = "n7"></th>
+                <th class = "nl" id = "n8"></th>
+                <th class = "DLS nl" id = "n9"></th>
+                <th class = "nl" id = "n10"></th>
+                <th class = "nl" id = "n11"></th>
+                <th class = "nl" id = "n12"></th>
+                <th class = "DWS nl" id = "n13"></th>
+                <th class = "nl" id = "n14"></th>
+                <th class = "nl" id = "n15"></th>
+            </tr>
+        </table>
+    </div>
+    <div id = "middle">
+        <button type ="button" id="submit" onclick="next()">Submit Word</button>
+        <button type ="button" id = "reset" onclick="reset()">Reset Game</button>
+        <h4>Rules</h4>
+        <ol class = rules>
+            <li>drag and drop letter into box</li>
+            <li>except for the first letter, a letter needs to go beside another</li>
+            <li>Click Submit Word to submit your word to get your score</li>
+            <li>if you wish to restart click Reset Game button</li>
+            <li>you also cannot remove the letters in the middle, it has to be from the left or right</li>
+            <li>Word needs to be two letters long</li>
+        </ol>
+        <table id = "info">
+            <tr>
+                <th><p>Word : </p></th>
+                <th class="currentword"></th>
+            </tr>
+            <tr>
+                <th><p>Word Score : </p></th>
+                <th class="Wscore"></th>
+            </tr>
+            <tr>
+                <th><p>Total Score : </p></th>
+                <th class="Tscore"></th>
+            </tr>
+            <tr>
+                <th><p>Amount Left : </p></th>
+                <th class="amountleft"></th>
+            </tr>
+        </table>
+    </div>
+    <div id = "rack">
+        <img id="rackstorage" src="../graphics_data/graphics_data/scrabble-tile-holder-406774_640.png" alt="rack">
+        <div id = "pieces">
+        </div>
+    </div>
+    <div id = "note">    
+        <h4>Rules</h4>
+        <ol class = "rules">
+            <li>couldnt get blank to work, so its defaults to B</li>
+        </ol>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/*
+    Creator : Anson Cheang
+    Contact : Anson0906@gmail.com
+    Source : TA, W3schools
+    Description : This is just styling
+    also for the one line scrabble
+    board image in the background, and 
+    area of certain places
+*/
+
+#rack{
+    margin: auto;
+    text-align: center;
+    width:650px;
+    height: 200px;
+}
+
+#pieces{
+    position: relative;
+    top: -130px;
+}
+
+#scrabbleimg{
+    background-image:url("../graphics_data/graphics_data/Scrabble_Board_OneLine.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#tablerow{
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#middle{
+    text-align: center;   
+}
+
+.nr{
+    width: 75px;
+    border-style: none;
+}
+
+.nl{
+    width: 75px;
+    border-style: none;
+}
+
+.tilepiece{
+    width: 70px;
+    height: 70px;
+}
+
+#info{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+tr th{
+    border-style: solid;
+    width: 100px;
+    text-align: center;
+}
+
+.rules{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+#note{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
